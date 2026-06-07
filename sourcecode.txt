@@ -1,0 +1,69 @@
+#!/bin/bash
+
+#BasicFetch
+#A simple, light and open-source fetch/system spec utility
+
+#Known bugs \/
+#first line of ascii being askew to the oringinal pasted
+
+
+#Colors
+bold=$(tput bold)
+normal=$(tput sgr0)
+red="\e[31m"
+green="\e[32m"
+blue="\e[34m"
+cyan="\e[36m"
+reset="\e[0m"
+#below add your ascii inside of the quotes 'ascii="' EX: ascii="
+#                                                           |   |
+
+#                                                           \___/"
+ascii="
+ ███     ██████████████████████████████████████████
+ ███     ██████████████████████████████████████████
+ ███     ████████      █████      ███        ██████
+ ███     ████████  ███  ███  ████  ██  ████████████
+ ███     ████████  ███  ███        ██        ██████
+ ███     ████████       ███  ████  ████████  █    █
+ ███     ████████  ███  ███  ████  ████████  ██████
+ ███     ████████       ███  ████  ██        ██████
+ ███     ██████████████████████████████████████████
+ ███     ████████       ███    ████████████████████
+ ███     ██████████   ████  ███████████████████████
+ ███     ██████████   ████  ███████████████████████
+ ███     ████████       ███    ████████████████████
+ ███     ██████████████████████████████████████████
+ ███     ████████      ███     █     ██    ██  █  █
+ ███     ████████  ███████  █████   ███  ████  █  █
+ ███     ████████     ████    ███   ███  ████     █
+ ███     ████████  ███████  █████   ███  ████  █  █
+ ███     ████████  ███████     ██   ███    ██  █  █
+ ███     ██████████████████████████████████████████
+ ███     ██████████████████████████████████████████
+ ███
+ ███
+ ███
+ ██████████████████████████████████████████████████
+ ██████████████████████████████████████████████████"
+
+#edit distroname (Linux distro name) in basicfetch.conf
+distroname=$(./basicfetch.conf)
+
+#start
+clear
+echo -e "${green}${bold}Specs\/${reset}"
+echo -e "Version: Basic Fetch v1.0"
+echo -e "User:  $USER"
+echo -e "Distro: ${distroname}"
+echo -e "Kernal: $(uname -r)"
+#If hostname doesn't work comment it out
+echo -e "Host: $(hostname)"
+echo -e "Desktop: $(echo $XDG_CURRENT_DESKTOP)"
+echo -e "CPU: $(grep 'model name' /proc/cpuinfo | head -1 | cut -d ':' -f2)" #optinal additional note (remove this note up to the quote to use) "${green}(ex: cpu cooler)${reset}"
+echo -e "GPU: $(lspci -v | grep -i "VGA\|3D" | awk -F: '{print $3}' | xargs)"
+echo -e "RAM: $(free -h --si | awk '/Mem:/ {print $3 " / " $2}')" #optinal note (remove this note up to the quote to use) "${color}Ex: ramtype ${color}idk${reset}${color} note${reset}"
+echo -e "Disk: $(df -h / | awk 'END{print $3 " / " $2}')" #additional note (remove this note up to the quote to use) "${color}very code ${color}ok${reset}"
+echo -e "Uptime: $(uptime -p)"
+
+echo "${ascii}"

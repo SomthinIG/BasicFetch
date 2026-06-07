@@ -11,7 +11,8 @@ Once you have extracted the .zip file and put the 2 files (basicfetch and basicf
 2: chmod +x basicfetch.conf (makes the configuration file executable (its how its read))
 
 once you have finished those commands open the configuration file (basicfetch.conf) and enter your linux disrobution's name
-<img src="basicfetchconf.png" width="500">
+<img src="basicfetchconfbefore.png" width="250">
+<img src="basicfetchconfafter.png" width="250">
 
 <h2>Lastly, run it!</h2>
 type in "./basicfetch"

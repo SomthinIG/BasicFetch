@@ -9,7 +9,7 @@ Once you have extracted the .zip file and put the 2 files (basicfetch and basicf
 run these 2 commands.
 
 <p>1: "chmod +x basicfetch" (makes the file run as an executable script)</p>
-<p>2: "chmod +x basicfetch.conf" (makes the configuration file executable (its how its read))</p>
+<p>2: "chmod +x basicfetch.conf" (makes the configuration file executable (that's how it's read))</p>
 
 once you have finished those commands open the config file, delete the 'not found' message and enter your linux disro's name.
 <img src="basicfetchconfbefore.png" width="750">

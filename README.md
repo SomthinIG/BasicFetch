@@ -12,8 +12,8 @@ run these 2 commands.
 <p>2: "chmod +x basicfetch.conf" (makes the configuration file executable (that's how it's read))</p>
 
 Once you have finished those commands open the config file, delete the 'not found' message and enter your linux disro's name.
-<img src="basicfetchconfbefore.png" width="750">
-
+<p><img src="basicfetchconfbefore.png" width="750"></p>
+<p><img src="basicfetchconfafter.png" width="750"></p>
 <h2>Lastly, run it!</h2>
 Type in "./basicfetch" into your terminal and enjoy!
 

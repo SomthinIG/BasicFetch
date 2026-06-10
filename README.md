@@ -11,8 +11,10 @@ run these 2 commands.
 <p>1: "chmod +x basicfetch" (makes the file run as an executable script)</p>
 <p>2: "chmod +x basicfetch.conf" (makes the configuration file executable (its how its read))</p>
 
-once you have finished those commands open the config file, delete the 'not found' message and enter your linux disro's name
+once you have finished those commands open the config file, delete the 'not found' message and enter your linux disro's name.
 <img src="basicfetchconfbefore.png" width="750">
 
 <h2>Lastly, run it!</h2>
-type in "./basicfetch" into your terminal and enjoy!
+Type in "./basicfetch" into your terminal and enjoy!
+
+<h3>Notes: tested working on Linux Mint, Arch and SteamOS (hostname doesn't work there)</h3>
